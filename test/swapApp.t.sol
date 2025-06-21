@@ -15,7 +15,7 @@ contract swapAppTest is Test{
 
     // Variables
     address uniswapV2SwapRouterAddress = 0x4752ba5DBc23f44D87826276BF6Fd6b1C372aD24;
-    address user = 0x21Ec864f18543Aa335F0E9Ba2CB0AD0F1892f5aE; // Address with USDT in Arbitrum Mainnet
+    address user = 0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX; // Address with USDC in Arbitrum Mainnet
     address tokenUSDC = 0xaf88d065e77c8cC2239327C5EDb3A432268e5831; // USDC address in Arbitrum Mainnet
     address tokenDAI = 0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1; // DAI address in Arbitrum Mainnet
 
