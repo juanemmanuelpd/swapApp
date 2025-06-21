@@ -2,15 +2,9 @@
 ## Overview 🪙
 An app for swapping stablecoins, in this case USDC -> DAI. Forking the Arbitrum network.
 ## Features 📃
-* List NFTs for easy sale.
-* Cancel your NFT listing whenever you want.
-* Buy NFTs using Ethereum.
-* Modify the percentage of fees you will receive for each sale made in your bazaar.
-* Add fraudulent users to a blacklist to prevent them from selling or buying NFTs.
-* Remove fraudulent users from the blacklist when the time is right.
-* In case of emergency, pause all bazaar transactions to avoid system errors or inappropriate actions by scammers and resume them when necessary.
-* All smart contract functions tested.
+* Swap your USDC for DAI
 ## Technical details ⚙️
+
 * Framework CLI -> Foundry.
 * Forge version -> 1.1.0-stable.
 * Solidity compiler version -> 0.8.24.
