@@ -6,8 +6,8 @@ An app for swapping stablecoins, in this case USDC -> DAI. Forking the Arbitrum 
 ## Technical details ⚙️
 * Interface for swapping tokens -> Uniswap v2 Contract Deployments.
 * V2Router02 Contract Address -> 0x4752ba5dbc23f44d87826276bf6fd6b1c372ad24 (Arbitrum).
+* Forked network for testing -> Arbitrum.
 * RPC Server Address -> https://arb1.arbitrum.io/rpc.
-* 
 * Framework CLI -> Foundry.
 * Forge version -> 1.1.0-stable.
 * Solidity compiler version -> 0.8.24.
