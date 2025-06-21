@@ -15,13 +15,14 @@ An app for swapping stablecoins, in this case USDC -> DAI. Forking the Arbitrum 
 1. Clone the GitHub repository.
 2. Open Visual Studio Code (you should already have Foundry installed).
 3. Select "File" > "Open Folder", select the cloned repository folder.
-4. In the project navigation bar, open the "TokenBazaar.sol" file located in the "src" folder.
-5. In the toolbar above, select "Terminal" > "New Terminal".
-6. Select the "Git bash" terminal (previously installed).
-7. Run the `forge build` command to compile the script.
-8. In the project navigation bar, open the "TokenBazaar.t.sol" file located in the "test" folder.
-9. Run the command `forge test --match-test` followed by the name of a test function to test it and verify the smart contract functions are working correctly. For example, run `forge test --match-test testMintNFT -vvvv` to test the `testMintNFT` function.
-10. Run `forge coverage` to generate a code coverage report, which allows you to verify which parts of the "NFTMarketplace.sol" script code (in the "src" folder) are executed by the tests. This helps identify areas outside the coverage that could be exposed to errors/vulnerabilities.
+4. In the project navigation bar, open the "swapApp.t.sol" file located in the "test" folder.
+5. On line 18 ("Address with USDC in Arbitrum Mainnet") enter the address of your wallet with USDC in the Arbitrum network. Note: Verify that you have at least 5 USDC on the Arbitrum network.
+6. In the toolbar above, select "Terminal" > "New Terminal".
+7. Select the "Git bash" terminal (previously installed).
+10. Run the command `forge test -vvvv --fork-url https://arb1.arbitrum.io/rpc --match-test` followed by the name of a test function to test it and verify the smart contract functions are working correctly. For example, run `forge test -vvvv --fork-url https://arb1.arbitrum.io/rpc --match-test testHasBeenDeployedCorrectly` to test the `testHasBeenDeployedCorrectly` function.
+11. Run `forge test -vvvv --fork-url https://arb1.arbitrum.io/rpc --match-test testSwapTokensCorrectly` to swap your 5 USDC for DAI. This is just a test on the forked Arbitrum network, so your USDC will remain in your wallet after this.
+12. If you want to change the amount of USDC to swap, you will have to edit the amountIn variable in the testSwapTokensCorrectly() function.
+13. Run `forge coverage --fork-url https://arb1.arbitrum.io/rpc` to generate a code coverage report, which allows you to verify which parts of the "NFTMarketpl.sol" script code (in the "src" folder) are executed by the tests. This helps identify areas outside the coverage that could be exposed to errors/vulnerabilities.
 ## Functions 📌
 * `listNFT()` -> Puts an NFT up for sale using the parameters seller, nftaddress, tokenId, and price
 * `cancelList()` -> Allows the owner of a listed NFT to cancel the sale of the NFT at any time.
